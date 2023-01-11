@@ -1,3 +1,5 @@
+import server$ from "solid-start/server";
+import { toggleTodo } from "~/db/utils";
 import styles from "./todo.module.css";
 
 export type Todo = {
@@ -6,6 +8,10 @@ export type Todo = {
   content: string;
   status: boolean;
 };
+
+const updateTodo = server$((id) => {
+  toggleTodo(id);
+});
 
 export default function Todo({ todo }: { todo: Todo }) {
   return (
@@ -18,9 +24,7 @@ export default function Todo({ todo }: { todo: Todo }) {
         class={styles.completed}
         type="checkbox"
         checked={todo.status}
-        onClick={(e) =>
-          console.log("This needs to update the todo status somehow...")
-        }
+        onClick={(e) => updateTodo(todo.id)}
       ></input>
     </div>
   );

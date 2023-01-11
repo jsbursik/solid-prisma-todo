@@ -22,7 +22,6 @@ export async function getTodo(todoId: number) {
 // If you wanted to update the status of a todo
 export async function toggleTodo(todoId: number) {
   const todo = await getTodo(todoId); // I could just make the status of the Todo an arg for this function instead
-  
   return await prisma.todo.update({
     where: { id: todoId },
     data: { status: !todo?.status }
