@@ -1,7 +1,7 @@
 .container {
   height: 80px;
-  width: 380px;
-  margin: 9px auto;
+  width: auto;
+  margin-bottom: 1em;
 
   color: #3c3e3f;
 
@@ -34,7 +34,8 @@
 }
 
 .completed {
-  margin: 0 15px 0 auto;
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 input[type="checkbox"] {

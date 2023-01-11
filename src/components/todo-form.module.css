@@ -1,0 +1,23 @@
+.button {
+  align-self: flex-end;
+
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+
+  border: 2px solid #a1a5a8;
+  border-radius: 50px;
+  background-color: #e6edf1;
+  box-shadow: 4px 4px 8px #bbc0c2;
+
+  font: Roboto;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #a1a5a8;
+  user-select: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
