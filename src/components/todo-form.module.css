@@ -1,5 +1,6 @@
 .button {
   align-self: flex-end;
+  margin-bottom: 1em;
 
   height: 50px;
   width: 50px;
@@ -16,8 +17,11 @@
   font-size: 2rem;
   color: #a1a5a8;
   user-select: none;
+
+  z-index: 1;
 }
 
 .button:hover {
   cursor: pointer;
 }
+
