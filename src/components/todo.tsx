@@ -1,6 +1,6 @@
 import server$ from "solid-start/server";
-import { toggleTodo } from "~/db/utils";
 import styles from "./todo.module.css";
+import { toggleTodo } from "~/db/utils";
 
 export type Todo = {
   id: number;
@@ -13,8 +13,7 @@ const updateTodo = server$((id) => {
   toggleTodo(id);
 });
 
-export function truncText(text: string): string {
-  let limit = 15;
+export function truncText(text: string, limit: number): string {
   let split = text.split(" ");
 
   return split.length > limit + 1
@@ -26,8 +25,8 @@ export default function Todo({ todo }: { todo: Todo }) {
   return (
     <div class="container">
       <div class={styles.tasktext}>
-        <b class={styles.taskname}>{truncText(todo.title)}</b>
-        <p class={styles.taskcontent}>{truncText(todo.content)}</p>
+        <b class={styles.taskname}>{truncText(todo.title, 8)}</b>
+        <p class={styles.taskcontent}>{truncText(todo.content, 20)}</p>
       </div>
       <input
         class={styles.completed}

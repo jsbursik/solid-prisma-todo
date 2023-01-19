@@ -7,6 +7,10 @@ export default function Fonts() {
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300"
+        rel="stylesheet"
+      />
     </>
   );
 }

@@ -1,9 +1,10 @@
 import { For } from "solid-js";
 import { useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
-import Todo from "~/components/todo";
-import TodoForm from "~/components/todo-form";
 import { getTodos } from "~/db/utils";
+
+import Todo from "~/components/todo";
+import Buttons from "~/components/buttons";
 
 export function routeData() {
   return createServerData$(getTodos);
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <For each={tasks()}>{(task, i) => <Todo todo={task} />}</For>
-      <TodoForm />
+      <Buttons />
     </main>
   );
 }
