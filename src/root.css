@@ -7,8 +7,60 @@ body {
 }
 
 main {
-  width: 20vw;
+  width: 350px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  width: auto;
+  padding: 15px;
+  margin-bottom: 1em;
+
+  color: #3c3e3f;
+
+  border: 2px solid #a1a5a8;
+  border-radius: 15px;
+  background: #ebf1f5;
+  box-shadow: 4px 4px 8px #bbc0c2;
+
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+
+  min-height: 25px;
+  min-width: 25px;
+
+  background: #fafdff;
+
+  border: 2px solid #a1a5a8;
+  border-radius: 9px;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+
+  height: 15px;
+  width: 15px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+
+  background: #a1a5a8;
+
+  border-radius: 5px;
+
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
